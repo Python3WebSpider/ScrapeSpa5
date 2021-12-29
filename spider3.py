@@ -11,8 +11,8 @@ from motor.motor_asyncio import AsyncIOMotorClient
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s: %(message)s')
 
-INDEX_URL = 'https://dynamic5.scrape.cuiqingcai.com/api/book/?limit=18&offset={offset}'
-DETAIL_URL = 'https://dynamic5.scrape.cuiqingcai.com/api/book/{id}'
+INDEX_URL = 'https://spa5.scrape.center/api/book/?limit=18&offset={offset}'
+DETAIL_URL = 'https://spa5.scrape.center/api/book/{id}'
 PAGE_SIZE = 18
 PAGE_NUMBER = 1
 CONCURRENCY = 5
