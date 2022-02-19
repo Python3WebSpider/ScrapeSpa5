@@ -62,7 +62,7 @@ class Spider(object):
             }, upsert=True)
     
     async def main(self):
-        self.session = aiohttp.ClientSession()
+        self.session = aiohttp.ClientSession(connector=aiohttp.TCPConnector(verify_ssl=False))
         # index tasks
         scrape_index_tasks = [asyncio.ensure_future(self.scrape_index(page)) for page in range(1, PAGE_NUMBER + 1)]
         results = await asyncio.gather(*scrape_index_tasks)
